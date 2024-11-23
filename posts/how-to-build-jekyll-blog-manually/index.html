@@ -30,26 +30,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Customize the Favicon" />
-<meta name="author" content="Cotes Chung" />
+<meta property="og:title" content="How To Build Jekyll Blog Manually" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons." />
-<meta property="og:description" content="The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons." />
-<link rel="canonical" href="https://carsleeper.github.io/posts/customize-the-favicon/" />
-<meta property="og:url" content="https://carsleeper.github.io/posts/customize-the-favicon/" />
+<meta name="description" content="github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) 나의 삽질 과정 ——– 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
+<meta property="og:description" content="github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) 나의 삽질 과정 ——– 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
+<link rel="canonical" href="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" />
+<meta property="og:url" content="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" />
 <meta property="og:site_name" content="Chirpy" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-08-11T00:34:00+08:00" />
+<meta property="article:published_time" content="2024-11-23T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Customize the Favicon" />
+<meta property="twitter:title" content="How To Build Jekyll Blog Manually" />
 <meta name="twitter:site" content="@twitter_username" />
-<meta name="twitter:creator" content="@cotes2020" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2024-03-02T01:28:45+08:00","datePublished":"2019-08-11T00:34:00+08:00","description":"The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.","headline":"Customize the Favicon","mainEntityOfPage":{"@type":"WebPage","@id":"https://carsleeper.github.io/posts/customize-the-favicon/"},"url":"https://carsleeper.github.io/posts/customize-the-favicon/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-23T00:00:00+08:00","datePublished":"2024-11-23T00:00:00+08:00","description":"github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) 나의 삽질 과정 ——– 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.","headline":"How To Build Jekyll Blog Manually","mainEntityOfPage":{"@type":"WebPage","@id":"https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/"},"url":"https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Customize the Favicon | Chirpy
+  <title>How To Build Jekyll Blog Manually | Chirpy
   </title>
 
   <!--
@@ -444,7 +442,7 @@
         
           
             
-              <span>Customize the Favicon</span>
+              <span>How To Build Jekyll Blog Manually</span>
             
 
           
@@ -512,6 +510,79 @@
 
 
 
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+    
+
+    
+
+    
+      
+    
+
+    <!-- lazy-load images -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+
+        
+        
+      
+    
+
+    <!-- combine -->
+    
+  
+
+  
+
 
 <!-- Add header for code snippets -->
 
@@ -545,6 +616,21 @@
 
       
     
+
+    
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
       
 
       
@@ -558,11 +644,6 @@
     
 
     
-  
-
-  
-  
-
   
 
   
@@ -591,7 +672,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Customize the Favicon</h1>
+    <h1 data-toc-skip>How To Build Jekyll Blog Manually</h1>
     
 
     <div class="post-meta text-muted">
@@ -608,41 +689,18 @@
 
 <time
   
-  data-ts="1565454840"
+  data-ts="1732291200"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug 11, 2019
+  Nov 23, 2024
 </time>
 
       </span>
 
       <!-- lastmod date -->
-      
-        <span>
-          Updated
-          <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1709314125"
-  data-df="ll"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  Mar  2, 2024
-</time>
-
-        </span>
       
 
       
@@ -656,10 +714,7 @@
 
           <em>
             
-              
-                <a href="https://github.com/cotes2020/">Cotes Chung</a>
-                
-              
+              <a href="https://twitter.com/username">your_full_name</a>
             
           </em>
         </span>
@@ -689,9 +744,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="212 words"
+  title="686 words"
 >
-  <em>1 min</em> read</span>
+  <em>3 min</em> read</span>
 
         </div>
       </div>
@@ -700,7 +755,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Customize the Favicon</span>
+      <span class="label text-truncate">How To Build Jekyll Blog Manually</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -713,7 +768,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Customize the Favicon</div>
+        <div class="label text-truncate py-2 ms-4">How To Build Jekyll Blog Manually</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -723,80 +778,82 @@
   
 
   <div class="content">
-    <p>The <a href="https://www.favicon-generator.org/about/">favicons</a> of <a href="https://github.com/cotes2020/jekyll-theme-chirpy/"><strong>Chirpy</strong></a> are placed in the directory <code class="language-plaintext filepath highlighter-rouge">assets/img/favicons/</code>. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.</p>
+    <h1 id="github-blog를-수동으로-빌드하기-github-actions로-빌드가-되지-않을-때">github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</h1>
+<p>나의 삽질 과정
+——–
+일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. <br />
+따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다.
+<a href="https://a.okmd.dev/md/6741a15fc8c3b.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/6741a15fc8c3b.png" alt="s18331711232024" loading="lazy"></a>
+그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. <br />
+길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. <br />
+그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다.</p>
+<ol>
+  <li>Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋.</li>
+  <li>
+    <p>1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.</p>
 
-<h2 id="generate-the-favicon"><span class="me-2">Generate the favicon</span><a href="#generate-the-favicon" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> $ bundle lock --add-platform x86_64-linux 그러나 위의 해결책에도 불구하고 나는 jekyll.yml을 커밋하는 과정에서 빌드오류가 발생했다.    결국 나는 github actions에서 제공해주는 빌드 기능을 사용하지 않고, 수동으로 local에서 빌드해서 커밋하기로 했다. ~~정말 기분이 더러웠다.~~
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
 
-<p>Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool <a href="https://realfavicongenerator.net/"><strong>Real Favicon Generator</strong></a> and click the button <kbd>Select your Favicon image</kbd> to upload your image file.</p>
+<h2 id="수동으로-jekyll-package-빌드하기"><span class="me-2">수동으로 jekyll package 빌드하기</span><a href="#수동으로-jekyll-package-빌드하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>제목에서는 github blog라는 다소 애매한 용어을 사용했지만, 사실 대부분의 github 블로그 테마는 jekyll package이다. <br />
+jekyll package를 수동으로 빌드해서 github에 업로드하려면, gh-pages라는 브랜치를 생성 후, 이 브랜치에 <strong>_site폴더만</strong> 커밋해야 한다. <br />
+_site폴더는 로컬에서 빌드하면 생성되는 폴더인데, c언어의 실행 파일과 같은, jekyll package의 빌드 후 생성된 정적 결과물이라고 볼 수 있다.</p>
+<ol>
+  <li>
+    <p>패키지 빌드 <br />
+로컬의 패키지 루트 폴더에서 다음과 같이 패키지를 빌드한다.</p>
 
-<p>In the next step, the webpage will show all usage scenarios. You can keep the default options, scroll to the bottom of the page, and click the button <kbd>Generate your Favicons and HTML code</kbd> to generate the favicon.</p>
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> $ bundle exec jekyll build
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>_site폴더가 생성되었을 것이다. _site폴더에서 다음의 명령들을 입력해서 gh-pages 브랜치에 _site 폴더의 파일들을 push한다.</p>
 
-<h2 id="download--replace"><span class="me-2">Download &amp; Replace</span><a href="#download--replace" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre> git init
+ git remote add origin "ssh repo url"
+ git checkout -b gh-pages
+ git add .
+ git commit -m "deploy"
+ git push -u origin gh-pages --force
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>github settings - pages - source 섹션에서 gh-pages 브랜치를 선택한다.</p>
+  </li>
+</ol>
 
-<p>Download the generated package, unzip and delete the following two from the extracted files:</p>
+<p>이제 정상적으로 웹 사이트가 작동하는 것을 확인할 수 있다.</p>
 
-<ul>
-  <li><code class="language-plaintext filepath highlighter-rouge">browserconfig.xml</code></li>
-  <li><code class="language-plaintext filepath highlighter-rouge">site.webmanifest</code></li>
-</ul>
+<h3 id="출처"><span class="me-2">출처</span><a href="#출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<hr />
 
-<p>And then copy the remaining image files (<code class="language-plaintext filepath highlighter-rouge">.PNG</code> and <code class="language-plaintext filepath highlighter-rouge">.ICO</code>) to cover the original files in the directory <code class="language-plaintext filepath highlighter-rouge">assets/img/favicons/</code> of your Jekyll site. If your Jekyll site doesn’t have this directory yet, just create one.</p>
-
-<p>The following table will help you understand the changes to the favicon files:</p>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>File(s)</th>
-      <th style="text-align: center">From Online Tool</th>
-      <th style="text-align: center">From Chirpy</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">*.PNG</code></td>
-      <td style="text-align: center">✓</td>
-      <td style="text-align: center">✗</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">*.ICO</code></td>
-      <td style="text-align: center">✓</td>
-      <td style="text-align: center">✗</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<!-- markdownlint-disable-next-line -->
-<blockquote class="prompt-info">
-  <p>✓ means keep, ✗ means delete.</p>
-</blockquote>
-
-<p>The next time you build the site, the favicon will be replaced with a customized edition.</p>
+<p><a href="https://friendlyvillain.github.io/posts/chirpy-setup/">https://friendlyvillain.github.io/posts/chirpy-setup/</a> <br />
+chatgpt</p>
 
   </div>
 
   <div class="post-tail-wrapper text-muted">
     <!-- categories -->
     
-      <div class="post-meta mb-3">
-        <i class="far fa-folder-open fa-fw me-1"></i>
-        
-          <a href="/categories/blogging/">Blogging</a>,
-          <a href="/categories/tutorial/">Tutorial</a>
-      </div>
-    
 
     <!-- tags -->
-    
-      <div class="post-tags">
-        <i class="fa fa-tags fa-fw me-1"></i>
-        
-          <a
-            href="/tags/favicon/"
-            class="post-tag no-text-decoration"
-          >favicon</a>
-        
-      </div>
     
 
     <div
@@ -830,21 +887,21 @@
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Customize%20the%20Favicon%20-%20Chirpy&url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fcustomize-the-favicon%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=How%20To%20Build%20Jekyll%20Blog%20Manually%20-%20Chirpy&url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fhow-to-build-jekyll-blog-manually%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Customize%20the%20Favicon%20-%20Chirpy&u=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fcustomize-the-favicon%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=How%20To%20Build%20Jekyll%20Blog%20Manually%20-%20Chirpy&u=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fhow-to-build-jekyll-blog-manually%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fcustomize-the-favicon%2F&text=Customize%20the%20Favicon%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fhow-to-build-jekyll-blog-manually%2F&text=How%20To%20Build%20Jekyll%20Blog%20Manually%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -899,28 +956,7 @@
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/getting-started/">Getting Started</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/text-and-typography/">Text and Typography</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/write-a-new-post/">Writing a New Post</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
+          <a href="/posts/how-to-build-jekyll-blog-manually/">How To Build Jekyll Blog Manually</a>
         </li>
       
     </ul>
@@ -944,104 +980,7 @@
 
 
 
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-
-
-  <section>
-    <h2 class="panel-heading">Trending Tags</h2>
-    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/favicon/">favicon</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/getting-started/">getting started</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/typography/">typography</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/writing/">writing</a>
-      
-    </div>
-  </section>
 
 
             </div>
@@ -1094,46 +1033,6 @@
 
 
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
 
 
 
@@ -1143,100 +1042,6 @@
 
 
 
-
-  <aside id="related-posts" aria-labelledby="related-label">
-    <h3 class="mb-4" id="related-label">Further Reading</h3>
-    <nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4">
-      
-        <article class="col">
-          <a href="/posts/getting-started/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565355300"
-  data-df="ll"
-  
->
-  Aug  9, 2019
-</time>
-
-              <h4 class="pt-0 my-2">Getting Started</h4>
-              <div class="text-muted">
-                <p>Get started with Chirpy basics in this comprehensive overview. You will learn how to install, configure, and use your first Chirpy-based website, as well as deploy it to a web server.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/write-a-new-post/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565244600"
-  data-df="ll"
-  
->
-  Aug  8, 2019
-</time>
-
-              <h4 class="pt-0 my-2">Writing a New Post</h4>
-              <div class="text-muted">
-                <p>This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
-
-Naming and...</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-        <article class="col">
-          <a href="/posts/text-and-typography/" class="post-preview card h-100">
-            <div class="card-body">
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565235180"
-  data-df="ll"
-  
->
-  Aug  8, 2019
-</time>
-
-              <h4 class="pt-0 my-2">Text and Typography</h4>
-              <div class="text-muted">
-                <p>Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.</p>
-              </div>
-            </div>
-          </a>
-        </article>
-      
-    </nav>
-  </aside>
-  <!-- #related-posts -->
 
 
             
@@ -1248,13 +1053,9 @@ Naming and...</p>
   
 
   
-    <a
-      href="/posts/getting-started/"
-      class="btn btn-outline-primary"
-      aria-label="Older"
-    >
-      <p>Getting Started</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Older">
+      <p>-</p>
+    </div>
   
 
   
@@ -1326,104 +1127,7 @@ Naming and...</p>
 
 
 
-  
-    
-    
-    
-    
-      
-        
-        
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-
-
-  <section>
-    <h2 class="panel-heading">Trending Tags</h2>
-    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/favicon/">favicon</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/getting-started/">getting started</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/typography/">typography</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/writing/">writing</a>
-      
-    </div>
-  </section>
 
 
     </div>

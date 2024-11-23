@@ -4,7 +4,7 @@
   <id>https://carsleeper.github.io/</id>
   <title>Chirpy</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-23T17:09:24+08:00</updated>
+  <updated>2024-11-23T18:49:27+08:00</updated>
   <author>
     <name>your_full_name</name>
     <uri>https://carsleeper.github.io/</uri>
@@ -20,113 +20,33 @@
 
   
   <entry>
-    <title>Customize the Favicon</title>
-    <link href="https://carsleeper.github.io/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
-    <published>2019-08-11T00:34:00+08:00</published>
+    <title>How To Build Jekyll Blog Manually</title>
+    <link href="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" rel="alternate" type="text/html" title="How To Build Jekyll Blog Manually" />
+    <published>2024-11-23T00:00:00+08:00</published>
   
-    <updated>2024-03-02T01:28:45+08:00</updated>
+    <updated>2024-11-23T00:00:00+08:00</updated>
   
-    <id>https://carsleeper.github.io/posts/customize-the-favicon/</id>
-    <content type="text/html" src="https://carsleeper.github.io/posts/customize-the-favicon/" />
+    <id>https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/</id>
+    <content type="text/html" src="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" />
     <author>
-      <name>cotes</name>
+      <name>your_full_name</name>
     </author>
 
   
     
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
   
 
-  <summary>The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
+  <summary>github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)
+나의 삽질 과정
+——–
+일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 
+따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다.
 
-Generate the favicon
+그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 
+길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 
+그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다.
 
-Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Getting Started</title>
-    <link href="https://carsleeper.github.io/posts/getting-started/" rel="alternate" type="text/html" title="Getting Started" />
-    <published>2019-08-09T20:55:00+08:00</published>
-  
-    <updated>2024-08-27T15:18:52+08:00</updated>
-  
-    <id>https://carsleeper.github.io/posts/getting-started/</id>
-    <content type="text/html" src="https://carsleeper.github.io/posts/getting-started/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  <summary>Get started with Chirpy basics in this comprehensive overview. You will learn how to install, configure, and use your first Chirpy-based website, as well as deploy it to a web server.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Writing a New Post</title>
-    <link href="https://carsleeper.github.io/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
-    <published>2019-08-08T14:10:00+08:00</published>
-  
-    <updated>2024-07-02T06:00:39+08:00</updated>
-  
-    <id>https://carsleeper.github.io/posts/write-a-new-post/</id>
-    <content type="text/html" src="https://carsleeper.github.io/posts/write-a-new-post/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  <summary>This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
-
-Naming and Path
-
-Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to save time of cre...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>Text and Typography</title>
-    <link href="https://carsleeper.github.io/posts/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" />
-    <published>2019-08-08T11:33:00+08:00</published>
-  
-    <updated>2024-07-02T06:00:39+08:00</updated>
-  
-    <id>https://carsleeper.github.io/posts/text-and-typography/</id>
-    <content type="text/html" src="https://carsleeper.github.io/posts/text-and-typography/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Demo" />
-    
-  
-
-  <summary>Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.</summary>
+  Gi...</summary>
 
   </entry>
 
