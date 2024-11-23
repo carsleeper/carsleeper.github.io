@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>https://carsleeper.github.io/</id>
   <title>컴공생의 공부노트</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-23T23:30:47+08:00</updated>
+  <updated>2024-11-23T23:42:12+08:00</updated>
   <author>
     <name>Hyunwoo Lee</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>https://carsleeper.github.io/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://carsleeper.github.io/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/"/>
+    href="https://carsleeper.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
   <rights> © 2024 Hyunwoo Lee </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</title>
-    <link href="http://localhost:4000/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" rel="alternate" type="text/html" title="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
+    <link href="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" rel="alternate" type="text/html" title="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
     <published>2024-11-23T00:00:00+08:00</published>
   
     <updated>2024-11-23T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/</id>
-    <content type="text/html" src="http://localhost:4000/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
+    <id>https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/</id>
+    <content type="text/html" src="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
     <author>
       <name>Hyunwoo Lee</name>
     </author>
@@ -52,13 +52,13 @@
   
   <entry>
     <title>Dreamhack CSRF-1 Write-Up</title>
-    <link href="http://localhost:4000/posts/Dreamhack-csrf-1-write-up/" rel="alternate" type="text/html" title="Dreamhack CSRF-1 Write-Up" />
+    <link href="https://carsleeper.github.io/posts/Dreamhack-csrf-1-write-up/" rel="alternate" type="text/html" title="Dreamhack CSRF-1 Write-Up" />
     <published>2024-11-23T00:00:00+08:00</published>
   
     <updated>2024-11-23T00:00:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/Dreamhack-csrf-1-write-up/</id>
-    <content type="text/html" src="http://localhost:4000/posts/Dreamhack-csrf-1-write-up/" />
+    <id>https://carsleeper.github.io/posts/Dreamhack-csrf-1-write-up/</id>
+    <content type="text/html" src="https://carsleeper.github.io/posts/Dreamhack-csrf-1-write-up/" />
     <author>
       <name>Hyunwoo Lee</name>
     </author>
@@ -81,6 +81,32 @@ hacker -&amp;amp;gt;&amp;amp;gt; flag: &amp;amp;lt;img&amp;amp;gt; 입력
 flag -&amp;amp;gt;&amp;amp;gt; checkcsrf: &amp;amp;lt;img&amp;amp;gt; 전달
 activate checkcsrf
 checkcsrf -&amp;amp;gt;&amp;amp;gt; readurl: loc...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Text and Typography</title>
+    <link href="https://carsleeper.github.io/posts/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" />
+    <published>2019-08-08T11:33:00+08:00</published>
+  
+    <updated>2024-11-23T23:41:42+08:00</updated>
+  
+    <id>https://carsleeper.github.io/posts/text-and-typography/</id>
+    <content type="text/html" src="https://carsleeper.github.io/posts/text-and-typography/" />
+    <author>
+      <name>cotes</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Demo" />
+    
+  
+
+  <summary>Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.</summary>
 
   </entry>
 
