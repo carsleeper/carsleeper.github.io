@@ -2,51 +2,50 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://carsleeper.github.io/</id>
-  <title>Chirpy</title>
+  <title>컴공생의 공부노트</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-23T18:49:27+08:00</updated>
+  <updated>2024-11-23T19:49:53+08:00</updated>
   <author>
-    <name>your_full_name</name>
+    <name>Hyunwoo Lee</name>
     <uri>https://carsleeper.github.io/</uri>
   </author>
   <link rel="self" type="application/atom+xml" href="https://carsleeper.github.io/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
     href="https://carsleeper.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
-  <rights> © 2024 your_full_name </rights>
+  <rights> © 2024 Hyunwoo Lee </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
-    <title>How To Build Jekyll Blog Manually</title>
-    <link href="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" rel="alternate" type="text/html" title="How To Build Jekyll Blog Manually" />
+    <title>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</title>
+    <link href="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" rel="alternate" type="text/html" title="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
     <published>2024-11-23T00:00:00+08:00</published>
   
     <updated>2024-11-23T00:00:00+08:00</updated>
   
-    <id>https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/</id>
-    <content type="text/html" src="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" />
+    <id>https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/</id>
+    <content type="text/html" src="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
     <author>
-      <name>your_full_name</name>
+      <name>Hyunwoo Lee</name>
     </author>
 
   
     
   
 
-  <summary>github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)
-나의 삽질 과정
-——–
+  <summary>나의 삽질 과정
+
+
 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 
 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다.
 
 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 
-길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 
-그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다.
+이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다.
 
-  Gi...</summary>
+  Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, je...</summary>
 
   </entry>
 

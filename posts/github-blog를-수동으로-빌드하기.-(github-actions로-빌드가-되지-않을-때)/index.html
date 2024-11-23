@@ -30,24 +30,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="How To Build Jekyll Blog Manually" />
+<meta property="og:title" content="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) 나의 삽질 과정 ——– 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
-<meta property="og:description" content="github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) 나의 삽질 과정 ——– 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
-<link rel="canonical" href="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" />
-<meta property="og:url" content="https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/" />
-<meta property="og:site_name" content="Chirpy" />
+<meta name="description" content="나의 삽질 과정 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
+<meta property="og:description" content="나의 삽질 과정 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
+<link rel="canonical" href="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
+<meta property="og:url" content="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
+<meta property="og:site_name" content="컴공생의 공부노트" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-11-23T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="How To Build Jekyll Blog Manually" />
+<meta property="twitter:title" content="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-23T00:00:00+08:00","datePublished":"2024-11-23T00:00:00+08:00","description":"github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) 나의 삽질 과정 ——– 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.","headline":"How To Build Jekyll Blog Manually","mainEntityOfPage":{"@type":"WebPage","@id":"https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/"},"url":"https://carsleeper.github.io/posts/how-to-build-jekyll-blog-manually/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-23T00:00:00+08:00","datePublished":"2024-11-23T00:00:00+08:00","description":"나의 삽질 과정 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.","headline":"Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)","mainEntityOfPage":{"@type":"WebPage","@id":"https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/"},"url":"https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>How To Build Jekyll Blog Manually | Chirpy
+  <title>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) | 컴공생의 공부노트
   </title>
 
   <!--
@@ -64,8 +64,8 @@
   <link rel="manifest" href="/assets/img/favicons/site.webmanifest">
 
 <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico">
-<meta name="apple-mobile-web-app-title" content="Chirpy">
-<meta name="application-name" content="Chirpy">
+<meta name="apple-mobile-web-app-title" content="컴공생의 공부노트">
+<meta name="application-name" content="컴공생의 공부노트">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
@@ -258,8 +258,8 @@
   <header class="profile-wrapper">
     <a href="/" id="avatar" class="rounded-circle"><img src="https://chirpy-img.netlify.app/commons/avatar.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a>
 
-    <a class="site-title d-block" href="/">Chirpy</a>
-    <p class="site-subtitle fst-italic mb-0">A text-focused Jekyll theme</p>
+    <a class="site-title d-block" href="/">컴공생의 공부노트</a>
+    <p class="site-subtitle fst-italic mb-0">Math, Programming, Science</p>
   </header>
   <!-- .profile-wrapper -->
 
@@ -333,7 +333,7 @@
 
       
         <a
-          href="https://github.com/github_username"
+          href="https://github.com/carsleeper"
           aria-label="github"
           
 
@@ -379,7 +379,7 @@
 
       
         <a
-          href="javascript:location.href = 'mailto:' + ['example','domain.com'].join('@')"
+          href="javascript:location.href = 'mailto:' + ['hw1115.lee','gmail.com'].join('@')"
           aria-label="email"
           
 
@@ -442,7 +442,7 @@
         
           
             
-              <span>How To Build Jekyll Blog Manually</span>
+              <span>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</span>
             
 
           
@@ -616,6 +616,28 @@
 
       
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
 
     
   
@@ -623,27 +645,6 @@
   
   
 
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
   
 
   
@@ -672,7 +673,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>How To Build Jekyll Blog Manually</h1>
+    <h1 data-toc-skip>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</h1>
     
 
     <div class="post-meta text-muted">
@@ -714,7 +715,7 @@
 
           <em>
             
-              <a href="https://twitter.com/username">your_full_name</a>
+              <a href="https://github.com/carsleeper">Hyunwoo Lee</a>
             
           </em>
         </span>
@@ -744,7 +745,7 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="686 words"
+  title="656 words"
 >
   <em>3 min</em> read</span>
 
@@ -755,7 +756,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">How To Build Jekyll Blog Manually</span>
+      <span class="label text-truncate">Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -768,7 +769,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">How To Build Jekyll Blog Manually</div>
+        <div class="label text-truncate py-2 ms-4">Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -778,70 +779,66 @@
   
 
   <div class="content">
-    <h1 id="github-blog를-수동으로-빌드하기-github-actions로-빌드가-되지-않을-때">github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</h1>
-<p>나의 삽질 과정
-——–
-일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. <br />
+    <h2 id="나의-삽질-과정"><span class="me-2">나의 삽질 과정</span><a href="#나의-삽질-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p>일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. <br />
 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다.
 <a href="https://a.okmd.dev/md/6741a15fc8c3b.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/6741a15fc8c3b.png" alt="s18331711232024" loading="lazy"></a>
-그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. <br />
-길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. <br />
-그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다.</p>
+그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 
+이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다.</p>
 <ol>
   <li>Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋.</li>
-  <li>
-    <p>1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre> $ bundle lock --add-platform x86_64-linux 그러나 위의 해결책에도 불구하고 나는 jekyll.yml을 커밋하는 과정에서 빌드오류가 발생했다.    결국 나는 github actions에서 제공해주는 빌드 기능을 사용하지 않고, 수동으로 local에서 빌드해서 커밋하기로 했다. ~~정말 기분이 더러웠다.~~
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
+  <li>1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.</li>
 </ol>
 
-<h2 id="수동으로-jekyll-package-빌드하기"><span class="me-2">수동으로 jekyll package 빌드하기</span><a href="#수동으로-jekyll-package-빌드하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>제목에서는 github blog라는 다소 애매한 용어을 사용했지만, 사실 대부분의 github 블로그 테마는 jekyll package이다. <br />
-jekyll package를 수동으로 빌드해서 github에 업로드하려면, gh-pages라는 브랜치를 생성 후, 이 브랜치에 <strong>_site폴더만</strong> 커밋해야 한다. <br />
-_site폴더는 로컬에서 빌드하면 생성되는 폴더인데, c언어의 실행 파일과 같은, jekyll package의 빌드 후 생성된 정적 결과물이라고 볼 수 있다.</p>
-<ol>
-  <li>
-    <p>패키지 빌드 <br />
-로컬의 패키지 루트 폴더에서 다음과 같이 패키지를 빌드한다.</p>
+<blockquote class="prompt-tip">
+  <p>bundle lock –add-platform x86_64-linux</p>
+</blockquote>
 
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+<p>그러나 위의 해결책에도 불구하고 나는 jekyll.yml을 커밋하는 과정에서 빌드오류가 발생했다. <br />
+결국 나는 github actions에서 제공해주는 빌드 기능을 사용하지 않고, 수동으로 local에서 빌드해서 커밋하기로 했다. <del>정말 기분이 더러웠다.</del></p>
+
+<h2 id="수동으로-jekyll-package-빌드하기"><span class="me-2">수동으로 jekyll package 빌드하기</span><a href="#수동으로-jekyll-package-빌드하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<hr />
+
+<p>제목에서는 github blog라는 다소 애매한 용어을 사용했지만, 사실 대부분의 github 블로그 테마는 jekyll package이다. <br />
+jekyll package를 수동으로 빌드해서 github에 업로드하려면, gh-pages라는 브랜치를 생성 후, 이 브랜치에 <strong>_site폴더만</strong> 커밋해야 한다.</p>
+<blockquote class="prompt-info">
+  <p>_site폴더는 로컬에서 빌드하면 생성되는 폴더인데, c언어의 실행 파일과 같은, jekyll package의 빌드 후 생성된 정적 결과물이라고 볼 수 있다.</p>
+</blockquote>
+<ol>
+  <li>패키지 빌드 <br />
+로컬의 패키지 루트 폴더에서 다음과 같이 패키지를 빌드한다.
+    <div class="language-zsh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre> $ bundle exec jekyll build
+</pre></td><td class="rouge-code"><pre>bundle <span class="nb">exec </span>jekyll build
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
-  <li>
-    <p>_site폴더가 생성되었을 것이다. _site폴더에서 다음의 명령들을 입력해서 gh-pages 브랜치에 _site 폴더의 파일들을 push한다.</p>
-
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+  <li>_site폴더가 생성되었을 것이다. _site폴더에서 다음의 명령들을 입력해서 gh-pages 브랜치에 _site 폴더의 파일들을 push한다.
+    <div class="language-zsh highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-</pre></td><td class="rouge-code"><pre> git init
- git remote add origin "ssh repo url"
- git checkout -b gh-pages
- git add .
- git commit -m "deploy"
- git push -u origin gh-pages --force
+</pre></td><td class="rouge-code"><pre>git init
+git remote add origin <span class="s2">"ssh repo url"</span>
+git checkout <span class="nt">-b</span> gh-pages
+git add <span class="nb">.</span>
+git commit <span class="nt">-m</span> <span class="s2">"deploy"</span>
+git push <span class="nt">-u</span> origin gh-pages <span class="nt">--force</span>
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
-  <li>
-    <p>github settings - pages - source 섹션에서 gh-pages 브랜치를 선택한다.</p>
-  </li>
+  <li>github settings - pages - source 섹션에서 gh-pages 브랜치를 선택한다.</li>
 </ol>
 
-<p>이제 정상적으로 웹 사이트가 작동하는 것을 확인할 수 있다.</p>
-
-<h3 id="출처"><span class="me-2">출처</span><a href="#출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>이제 정상적으로 웹 사이트가 작동하는 것을 확인할 수 있다. <br />
+이후에 1~2번 과정을 통해 글을 업로드할 수 있다.</p>
+<h2 id="출처"><span class="me-2">출처</span><a href="#출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
 <p><a href="https://friendlyvillain.github.io/posts/chirpy-setup/">https://friendlyvillain.github.io/posts/chirpy-setup/</a> <br />
@@ -887,21 +884,21 @@ chatgpt</p>
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=How%20To%20Build%20Jekyll%20Blog%20Manually%20-%20Chirpy&url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fhow-to-build-jekyll-blog-manually%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=Github%20blog%EB%A5%BC%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.%20(github%20actions%EB%A1%9C%20%EB%B9%8C%EB%93%9C%EA%B0%80%20%EB%90%98%EC%A7%80%20%EC%95%8A%EC%9D%84%20%EB%95%8C)%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8&url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fgithub-blog%25EB%25A5%25BC-%25EC%2588%2598%25EB%258F%2599%25EC%259C%25BC%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25ED%2595%2598%25EA%25B8%25B0.-%28github-actions%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25EA%25B0%2580-%25EB%2590%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%259D%2584-%25EB%2595%258C%29%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=How%20To%20Build%20Jekyll%20Blog%20Manually%20-%20Chirpy&u=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fhow-to-build-jekyll-blog-manually%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=Github%20blog%EB%A5%BC%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.%20(github%20actions%EB%A1%9C%20%EB%B9%8C%EB%93%9C%EA%B0%80%20%EB%90%98%EC%A7%80%20%EC%95%8A%EC%9D%84%20%EB%95%8C)%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8&u=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fgithub-blog%25EB%25A5%25BC-%25EC%2588%2598%25EB%258F%2599%25EC%259C%25BC%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25ED%2595%2598%25EA%25B8%25B0.-%28github-actions%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25EA%25B0%2580-%25EB%2590%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%259D%2584-%25EB%2595%258C%29%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fhow-to-build-jekyll-blog-manually%2F&text=How%20To%20Build%20Jekyll%20Blog%20Manually%20-%20Chirpy" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fgithub-blog%25EB%25A5%25BC-%25EC%2588%2598%25EB%258F%2599%25EC%259C%25BC%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25ED%2595%2598%25EA%25B8%25B0.-%28github-actions%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25EA%25B0%2580-%25EB%2590%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%259D%2584-%25EB%2595%258C%29%2F&text=Github%20blog%EB%A5%BC%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.%20(github%20actions%EB%A1%9C%20%EB%B9%8C%EB%93%9C%EA%B0%80%20%EB%90%98%EC%A7%80%20%EC%95%8A%EC%9D%84%20%EB%95%8C)%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -956,7 +953,7 @@ chatgpt</p>
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/how-to-build-jekyll-blog-manually/">How To Build Jekyll Blog Manually</a>
+          <a href="/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/">Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</a>
         </li>
       
     </ul>
@@ -1080,7 +1077,7 @@ chatgpt</p>
     <time>2024</time>
 
     
-      <a href="https://twitter.com/username">your_full_name</a>.
+      <a href="https://github.com/carsleeper">Hyunwoo Lee</a>.
     
 
     
