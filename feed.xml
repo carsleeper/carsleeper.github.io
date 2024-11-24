@@ -4,7 +4,7 @@
   <id>https://carsleeper.github.io/</id>
   <title>컴공생의 공부노트</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-24T12:33:05+08:00</updated>
+  <updated>2024-11-25T01:45:14+08:00</updated>
   <author>
     <name>Hyunwoo Lee</name>
     <uri>https://carsleeper.github.io/</uri>
@@ -55,7 +55,7 @@
     <link href="https://carsleeper.github.io/posts/Dreamhack-csrf-1-write-up/" rel="alternate" type="text/html" title="Dreamhack CSRF-1 Write-Up" />
     <published>2024-11-23T00:00:00+08:00</published>
   
-    <updated>2024-11-23T00:00:00+08:00</updated>
+    <updated>2024-11-24T12:33:54+08:00</updated>
   
     <id>https://carsleeper.github.io/posts/Dreamhack-csrf-1-write-up/</id>
     <content type="text/html" src="https://carsleeper.github.io/posts/Dreamhack-csrf-1-write-up/" />
@@ -72,8 +72,7 @@
 
 문제에서 제공해주는 서버에 접속하면 다음과 같은 화면이 나온다. 
 
-또한 서버구조를 보면 
-frontend-side를 static, templates가, backend-side를 app.py가 담당하고 있음을 짐작할 수 있다. 
+또한 서버구조를 보면 frontend-side를 static과 templates폴더가, backend-side를 app.py가 담당하고 있음을 알 수 있다. 
 
 서버의 하위 url에 대한 내용들을 하나씩 분석하면 문제의 단서를 얻을 수 있다.
 함수 분석
@@ -87,7 +86,7 @@ read_url 함수
     def read_url(url, cookie={&amp;quot;name&amp;quot;: &amp;quot;name&amp;quot;, &amp;quot;value&amp;quot;: &amp;quot;value&amp;quot;}):    
     cookie.update({&amp;quot;domain&amp;quot;: &amp;quot;127.0.0.1&amp;quot;})
     try:
-        service = Service(executable_p...</summary>
+        service = Service(executable_pa...</summary>
 
   </entry>
 
