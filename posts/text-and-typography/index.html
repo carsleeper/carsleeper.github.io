@@ -24,7 +24,8 @@
   <meta
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-  ><!-- Setup Open Graph image -->
+  ><link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
+  <!-- Setup Open Graph image -->
   
     
   
@@ -41,7 +42,7 @@
       mermaidDiv.innerHTML = block.textContent;
       parent.replaceWith(mermaidDiv);
     });
-    mermaid.initialize({ startOnLoad: true });
+    mermaid.initialize({ startOnLoad: true, theme: 'default'});
   });
 </script>
 

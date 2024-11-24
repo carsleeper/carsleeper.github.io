@@ -24,7 +24,8 @@
   <meta
     name="viewport"
     content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-  ><!-- Setup Open Graph image -->
+  ><link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
+  <!-- Setup Open Graph image -->
   
 
   
@@ -751,15 +752,19 @@
             <h1 class="card-title my-2 mt-md-0">Dreamhack CSRF-1 Write-Up</h1>
 
             <div class="card-text content mt-0 mb-3">
-              <p>sequenceDiagram
-autoNumber
+              <p>문제풀이 개요
 
-actor hacker
-participant flag as flag (/flag)
-participant checkcsrf as check_csrf
-participant readurl as read_url
-participant vuln as vuln (/vuln)
-participant noticeflag...</p>
+
+문제에서 제공해주는 서버에 접속하면 다음과 같은 화면이 나온다. 
+
+또한 서버구조를 보면 
+frontend-side를 static, templates가, backend-side를 app.py가 담당하고 있음을 짐작할 수 있다. 
+
+서버의 하위 url에 대한 내용들을 하나씩 분석하면 문제의 단서를 얻을 수 있다.
+함수 분석
+
+
+read...</p>
             </div>
 
             <div class="post-meta flex-grow-1 d-flex align-items-end">
