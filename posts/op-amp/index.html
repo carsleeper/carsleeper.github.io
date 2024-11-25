@@ -1618,9 +1618,11 @@ $v_o$를 $v_-$로 close-loop을 통해 feedback시키는 회로이다.  <br />
 이때 feedback되는 $v_-$는 다음과 같이 표현된다. <br />
 \(\begin{equation}
 v_i = v_+ \quad ,\quad v_- = v_oB
-\end{equation}\)
-    <h3 id="동작-방식에-따라"><span class="me-2">동작 방식에 따라</span><a href="#동작-방식에-따라" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-  </li>
+\end{equation}\)</li>
+</ul>
+
+<h3 id="동작-방식에-따라"><span class="me-2">동작 방식에 따라</span><a href="#동작-방식에-따라" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<ul>
   <li>Inverting op-amp <br />
 <a href="https://a.okmd.dev/md/67443706b792c.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/67443706b792c.png" alt="s17362011252024" width="500px" loading="lazy"></a> <br />
 입력신호의 위상을 뒤집어서 출력하는 close-loop op-amp이다. <br />
@@ -1644,9 +1646,9 @@ A = {v_o \over v_i} = {v_i({R_1 + R_2 \over R_1}) \over v_i} = {R_1 + R_2 \over 
 <h3 id="연산-종류에-따라"><span class="me-2">연산 종류에 따라</span><a href="#연산-종류에-따라" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ul>
   <li>
-    <p>Difference op-amp  <br />
-<a href="https://a.okmd.dev/md/67443ea52f0fe.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/67443ea52f0fe.png" alt="s18085111252024" width="500px" loading="lazy"></a>  <br />
-두 입력신호의 차이를 증폭시키는 op-amp이다.  <br />
+    <p>Difference op-amp <br />
+<a href="https://a.okmd.dev/md/67443ea52f0fe.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/67443ea52f0fe.png" alt="s18085111252024" width="500px" loading="lazy"></a> <br />
+두 입력신호의 차이를 증폭시키는 op-amp이다. <br />
 op-amp의 $v_-$ 노드에서 KCL\eqref{eq:KCL}, $v_+$ 노드 양 옆 저항에서 옴의 법칙\eqref{eq:ohm}을 쓰면 기본식을 구할 수 있다. <br />
 \(\begin{align}
 {v_1 - v_- \over R_1} + {v_o - v_- \over R_2} = 0 \label{eq:KCL} \\
