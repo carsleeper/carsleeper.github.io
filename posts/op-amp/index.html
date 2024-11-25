@@ -1571,34 +1571,36 @@ op-amp 등가회로 <br />
 op-amp의 자세한 작동과정도 알아보려 했지만 컴퓨터공학 전공인 필자의 입장에선 배보다 배꼽이 더 커지는 것 같아서, 대략적으로 어떻게 구성되었는지만 이해하기로 했다.</p>
 <h2 id="이상적인-op-amp의-기본-법칙"><span class="me-2">이상적인 op-amp의 기본 법칙</span><a href="#이상적인-op-amp의-기본-법칙" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
-<ol class="prompt-info">
-  <li>회로 내부에서 실제로 $v_+$노드 와 $v_-$ 노드는 서로 open 되어있다. 따라서 $i_+$ = $i_-$ = 0
-    <blockquote>
-      <p>$i_+ = i_- = 0$</p>
-    </blockquote>
-  </li>
-</ol>
-<ol class="prompt-info">
+<ul>
+  <li>회로 내부에서 실제로 $v_+$노드 와 $v_-$ 노드는 서로 open 되어있다. 따라서 $i_+$ = $i_-$ = 0</li>
+</ul>
+
+<blockquote class="prompt-info">
+  <p>$i_+ = i_- = 0$</p>
+</blockquote>
+
+<ul>
   <li>아래의 설명을 읽기 전에 <a href="#link">close-loop op-amp</a>에 대해 이해하고 오길 바란다. <br />
 negative feedback을 하는 close-loop op-amp에 대해서
 \(\begin{align}
- since \quad v_- =  Bv_o \quad and \quad v_o = Av_+ - Av_- \quad, \\
- v_+AB = Bv_o + Av_-B = v_- + Av_-B \\
- v_+B = v_-({1 \over A} + B)
+  since \quad v_- =  Bv_o \quad and \quad v_o = Av_+ - Av_- \quad, \\
+  v_+AB = Bv_o + Av_-B = v_- + Av_-B \\
+  v_+B = v_-({1 \over A} + B)
 \end{align}\)
 이 때, 이상적인 op-amp는 $A \rightarrow \infty $라고 가정한다. <br />
 $A \rightarrow \infty $라고 가정해야 \eqref{eq:result}라는 결론이 도출되는데,이 결론으로 인해 회로 분석과정이 훨씬 단순해진다고 한다.  <br />
 \eqref{eq:result}의 결론을 유도하기 위한 짜집기 정도로 생각할 수 있겠다.
 \(\begin{align}
- \lim_{A \to \infty}v_-({1 \over A} + B) = v_-B = v_+B
- \therefore v_- = v_+ \label{eq:result}
+  \lim_{A \to \infty}v_-({1 \over A} + B) = v_-B = v_+B
+  \therefore v_- = v_+ \label{eq:result}
 \end{align}\)
-즉 close-loop op-amp에 대해,
-    <blockquote>
-      <p>$v_- = v_+$</p>
-    </blockquote>
-  </li>
-</ol>
+즉 close-loop op-amp에 대해,</li>
+</ul>
+
+<blockquote class="prompt-info">
+  <p>$v_- = v_+$</p>
+</blockquote>
+
 <h2 id="op-amp의-종류"><span class="me-2">op-amp의 종류</span><a href="#op-amp의-종류" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 <h3 id="link"><span class="me-2">구성에 따라</span><a href="#link" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
