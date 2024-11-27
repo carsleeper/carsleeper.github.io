@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "phasor notation의 개념과 연산",
+    "url": "/posts/IEEE-10-1/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-11-27 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "phasor notation전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \\cos(\\omega t + \\phi)$ 와 같은 수식을 사용한다. 주기가 $f$인 정현파라고 하면, $\\omega = 2\\pi f$가 될 것이다. 동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\\omega$가 같다. 따라서 $A$와 $\\ph...",
+    "content": "phasor notation전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \\cos(\\omega t + \\phi)$ 와 같은 수식을 사용한다. 주기가 $f$인 정현파라고 하면, $\\omega = 2\\pi f$가 될 것이다. 동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\\omega$가 같다. 따라서 $A$와 $\\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다.  ($ \\because \\omega$는 상수이다.) 다음의 과정을 거쳐보자.  삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다.\\(\\begin{equation} f(t) = A \\cos(\\omega t + \\phi) = \\textcolor{red}{A\\cos\\phi}\\cos\\omega t - \\textcolor{blue}{A\\sin\\phi}\\sin\\omega t \\label{eq:cosadd}\\end{equation}\\)  \\eqref{eq:cosadd} 에서 $\\textcolor{red}{A\\cos\\phi}$를 $\\textcolor{red}{X}$, $\\textcolor{blue}{A\\sin\\phi}$를 $\\textcolor{blue}{Y}$라고 둔다면, $f(t)$는 다음과 같다. \\(\\begin{equation} f(t) = \\textcolor{red}{X}\\cos\\omega t - \\textcolor{blue}{Y}\\sin\\omega t\\end{equation}\\)  $\\omega$는 상수이므로, $\\textcolor{red}{X}$와 $\\textcolor{blue}{Y}$를 결정하는 것으로 어떤 특정한 정현파를 표현할 수 있게 된다. 이때, $X + Yj$와 같이 복소수를 이용하여 표현하면, 허수가 기하적으로 회전을 의미한다는 사실과, 오일러 방정식 등 차후의 계산에 있어서 많은 이점을 얻게 된다.   $X + Yj$는 $A\\cos(\\phi) + A\\sin(\\phi)j$ 같이 표현할 수 있고, $A\\cos(\\phi) + A\\sin(\\phi)j$는 오일러 공식으로 다음과 같이 표현이 가능하다.\\(\\begin{equation}A\\cos\\phi + jA\\sin\\phi  = Ae^{\\phi j}\\end{equation}\\)  $Ae^{\\phi j}$를 $A \\angle \\phi$와 같이 표현하기로 하자.우리는 결론적으로 $A$와 $\\phi$를 이용하여 정현파를 표현할 수 있게 되었다. 마치 $(1,2)$로 특정한 점을 표현할 수 있는 것처럼 말이다. 이 방법을 phasor notation 이라고 부른다. phase는 물리학에서 위상을 의미하는데, 정현파를 위상차인 $\\phi$를 이용하여 표현하므로, phasor notation이라고 부른다고 한다.정리특정한 정현파를 다음과 같이 여러가지 방식으로  표현할 수 있고, \\eqref{eq:phasor1} , \\eqref{eq:phasor2} 의 표현방식을 phasor notation이라고 한다.\\(\\begin{align}    \\textcolor{red}{A}\\cos(\\omega t + \\textcolor{blue}{\\phi}) \\\\    \\textcolor{red}{A}e^{\\omega\\textcolor{blue}{\\phi}} \\label{eq:phasor1} \\\\    \\textcolor{red}{A} \\angle \\textcolor{blue}{\\phi} \\label{eq:phasor2} \\\\    X + Yj\\end{align}\\)phasor notation의 곱셈, 나눗셈과 미분phasor notation의 곱셈, 나눗셈$ X = X_me^{\\omega\\phi} , Y = Y_me^{\\omega\\theta} $의 정의를 이용하면 phasor notation의 사칙연산을 유도할 수 있다.\\(\\begin{align}   XY = X_mY_m \\angle (\\phi + \\theta) \\\\   {X \\over Y} = {X_m \\over Y_m} \\angle (\\phi - \\theta) \\end{align}\\)phasor notation의 미분또한 phasor notation은 정현파, 즉 t에 대한 함수를 의미하므로 phasor notation의 미분도 정의될 수 있다. 이때, phasor notation은  exponential의 미분법을 따르므로 매우 간단한 형태로 정리된다. $ f(t) $ 에 대해,\\(\\begin{align}            f(t) = \\textcolor{red}{X}\\cos\\omega t - \\textcolor{blue}{Y}\\sin\\omega t \\label{eq:before} \\\\    f^\\prime(t) = -\\omega X\\sin\\omega t - \\omega Y\\cos\\omega t \\\\                = \\textcolor{red}{(-\\omega Y)}\\cos\\omega t - \\textcolor{blue}{(\\omega X)}\\sin\\omega t \\label{eq:after}\\end{align}\\)\\eqref{eq:before}과 \\eqref{eq:after}를 비교해보면, 각각 $ X \\rightarrow -\\omega Y $ , $ Y \\rightarrow \\omega X$로 바뀐 것을 볼 수 있다. 이는 phasor notation의 rectangular representation에서 $\\omega j$를 곱한 형태와 같다.\\(\\begin{align}    V = \\textcolor{red}{X} + \\textcolor{blue}{Y}j \\\\    V^\\prime = \\omega j\\textcolor{red}{X} + -\\omega\\textcolor{blue}{Y} = \\omega jV \\\\    \\therefore V^\\prime = \\omega jV\\end{align}\\) 즉, $ V^\\prime = \\omega jV $ 이다. 미분식이 원형의 상수곱 형태로 표현된다는 사실은 계산상에 있어서 매우 편리한 이점이다. 대표적인 예시가 지수함수이다. 추후에 포스팅할 ac회로에서의 inductor, capacitor를 설명할 때도, 이 미분식이 매우 편리하게 이용된다.출처  https://angeloyeo.github.io/2019/06/18/phasor.html  chatgpt  부산대학교 전상률 교수님 강의자료"
+  },
+  
+  {
     "title": "op-amp의 개념, 구조, 종류",
     "url": "/posts/op-amp/",
     "categories": "",

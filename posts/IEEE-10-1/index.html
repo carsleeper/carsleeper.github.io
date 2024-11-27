@@ -27,6 +27,31 @@
   ><link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css">
   <!-- Setup Open Graph image -->
   
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+    inlineMath: [ ['$', '$'] ],
+    displayMath: [ ['$$', '$$'] ],
+    processEscapes: true,
+  }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  
 
   
 
@@ -35,24 +60,24 @@
 
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
+<meta property="og:title" content="phasor notation의 개념과 연산" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="나의 삽질 과정 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
-<meta property="og:description" content="나의 삽질 과정 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도." />
-<link rel="canonical" href="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
-<meta property="og:url" content="https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/" />
+<meta name="description" content="phasor notation 전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \cos(\omega t + \phi)$ 와 같은 수식을 사용한다. 주기가 $f$인 정현파라고 하면, $\omega = 2\pi f$가 될 것이다. 동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\omega$가 같다. 따라서 $A$와 $\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다. ($ \because \omega$는 상수이다.) 다음의 과정을 거쳐보자. 삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다. \(\begin{equation} f(t) = A \cos(\omega t + \phi) = \textcolor{red}{A\cos\phi}\cos\omega t - \textcolor{blue}{A\sin\phi}\sin\omega t \label{eq:cosadd} \end{equation}\) \eqref{eq:cosadd} 에서 $\textcolor{red}{A\cos\phi}$를 $\textcolor{red}{X}$, $\textcolor{blue}{A\sin\phi}$를 $\textcolor{blue}{Y}$라고 둔다면, $f(t)$는 다음과 같다. \(\begin{equation} f(t) = \textcolor{red}{X}\cos\omega t - \textcolor{blue}{Y}\sin\omega t \end{equation}\) $\omega$는 상수이므로, $\textcolor{red}{X}$와 $\textcolor{blue}{Y}$를 결정하는 것으로 어떤 특정한 정현파를 표현할 수 있게 된다. 이때, $X + Yj$와 같이 복소수를 이용하여 표현하면, 허수가 기하적으로 회전을 의미한다는 사실과, 오일러 방정식 등 차후의 계산에 있어서 많은 이점을 얻게 된다. $X + Yj$는 $A\cos(\phi) + A\sin(\phi)j$ 같이 표현할 수 있고, $A\cos(\phi) + A\sin(\phi)j$는 오일러 공식으로 다음과 같이 표현이 가능하다. \(\begin{equation} A\cos\phi + jA\sin\phi = Ae^{\phi j} \end{equation}\) $Ae^{\phi j}$를 $A \angle \phi$와 같이 표현하기로 하자. 우리는 결론적으로 $A$와 $\phi$를 이용하여 정현파를 표현할 수 있게 되었다. 마치 $(1,2)$로 특정한 점을 표현할 수 있는 것처럼 말이다. 이 방법을 phasor notation 이라고 부른다. phase는 물리학에서 위상을 의미하는데, 정현파를 위상차인 $\phi$를 이용하여 표현하므로, phasor notation이라고 부른다고 한다. 정리 특정한 정현파를 다음과 같이 여러가지 방식으로 표현할 수 있고, \eqref{eq:phasor1} , \eqref{eq:phasor2} 의 표현방식을 phasor notation이라고 한다. (\begin{align} \textcolor{red}{A}\cos(\omega t + \textcolor{blue}{\phi}) \textcolor{red}{A}e^{\omega\textcolor{blue}{\phi}} \label{eq:phasor1} \textcolor{red}{A} \angle \textcolor{blue}{\phi} \label{eq:phasor2} X + Yj \end{align}) phasor notation의 곱셈, 나눗셈과 미분" />
+<meta property="og:description" content="phasor notation 전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \cos(\omega t + \phi)$ 와 같은 수식을 사용한다. 주기가 $f$인 정현파라고 하면, $\omega = 2\pi f$가 될 것이다. 동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\omega$가 같다. 따라서 $A$와 $\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다. ($ \because \omega$는 상수이다.) 다음의 과정을 거쳐보자. 삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다. \(\begin{equation} f(t) = A \cos(\omega t + \phi) = \textcolor{red}{A\cos\phi}\cos\omega t - \textcolor{blue}{A\sin\phi}\sin\omega t \label{eq:cosadd} \end{equation}\) \eqref{eq:cosadd} 에서 $\textcolor{red}{A\cos\phi}$를 $\textcolor{red}{X}$, $\textcolor{blue}{A\sin\phi}$를 $\textcolor{blue}{Y}$라고 둔다면, $f(t)$는 다음과 같다. \(\begin{equation} f(t) = \textcolor{red}{X}\cos\omega t - \textcolor{blue}{Y}\sin\omega t \end{equation}\) $\omega$는 상수이므로, $\textcolor{red}{X}$와 $\textcolor{blue}{Y}$를 결정하는 것으로 어떤 특정한 정현파를 표현할 수 있게 된다. 이때, $X + Yj$와 같이 복소수를 이용하여 표현하면, 허수가 기하적으로 회전을 의미한다는 사실과, 오일러 방정식 등 차후의 계산에 있어서 많은 이점을 얻게 된다. $X + Yj$는 $A\cos(\phi) + A\sin(\phi)j$ 같이 표현할 수 있고, $A\cos(\phi) + A\sin(\phi)j$는 오일러 공식으로 다음과 같이 표현이 가능하다. \(\begin{equation} A\cos\phi + jA\sin\phi = Ae^{\phi j} \end{equation}\) $Ae^{\phi j}$를 $A \angle \phi$와 같이 표현하기로 하자. 우리는 결론적으로 $A$와 $\phi$를 이용하여 정현파를 표현할 수 있게 되었다. 마치 $(1,2)$로 특정한 점을 표현할 수 있는 것처럼 말이다. 이 방법을 phasor notation 이라고 부른다. phase는 물리학에서 위상을 의미하는데, 정현파를 위상차인 $\phi$를 이용하여 표현하므로, phasor notation이라고 부른다고 한다. 정리 특정한 정현파를 다음과 같이 여러가지 방식으로 표현할 수 있고, \eqref{eq:phasor1} , \eqref{eq:phasor2} 의 표현방식을 phasor notation이라고 한다. (\begin{align} \textcolor{red}{A}\cos(\omega t + \textcolor{blue}{\phi}) \textcolor{red}{A}e^{\omega\textcolor{blue}{\phi}} \label{eq:phasor1} \textcolor{red}{A} \angle \textcolor{blue}{\phi} \label{eq:phasor2} X + Yj \end{align}) phasor notation의 곱셈, 나눗셈과 미분" />
+<link rel="canonical" href="https://carsleeper.github.io/posts/IEEE-10-1/" />
+<meta property="og:url" content="https://carsleeper.github.io/posts/IEEE-10-1/" />
 <meta property="og:site_name" content="컴공생의 공부노트" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-11-23T00:00:00+08:00" />
+<meta property="article:published_time" content="2024-11-27T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)" />
+<meta property="twitter:title" content="phasor notation의 개념과 연산" />
 <meta name="twitter:site" content="@twitter_username" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-23T00:00:00+08:00","datePublished":"2024-11-23T00:00:00+08:00","description":"나의 삽질 과정 일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다. 그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다. Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋. 1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.","headline":"Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)","mainEntityOfPage":{"@type":"WebPage","@id":"https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/"},"url":"https://carsleeper.github.io/posts/github-blog%EB%A5%BC-%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.-(github-actions%EB%A1%9C-%EB%B9%8C%EB%93%9C%EA%B0%80-%EB%90%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EB%95%8C)/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2024-11-27T00:00:00+08:00","datePublished":"2024-11-27T00:00:00+08:00","description":"phasor notation 전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \\cos(\\omega t + \\phi)$ 와 같은 수식을 사용한다. 주기가 $f$인 정현파라고 하면, $\\omega = 2\\pi f$가 될 것이다. 동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\\omega$가 같다. 따라서 $A$와 $\\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다. ($ \\because \\omega$는 상수이다.) 다음의 과정을 거쳐보자. 삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다. \\(\\begin{equation} f(t) = A \\cos(\\omega t + \\phi) = \\textcolor{red}{A\\cos\\phi}\\cos\\omega t - \\textcolor{blue}{A\\sin\\phi}\\sin\\omega t \\label{eq:cosadd} \\end{equation}\\) \\eqref{eq:cosadd} 에서 $\\textcolor{red}{A\\cos\\phi}$를 $\\textcolor{red}{X}$, $\\textcolor{blue}{A\\sin\\phi}$를 $\\textcolor{blue}{Y}$라고 둔다면, $f(t)$는 다음과 같다. \\(\\begin{equation} f(t) = \\textcolor{red}{X}\\cos\\omega t - \\textcolor{blue}{Y}\\sin\\omega t \\end{equation}\\) $\\omega$는 상수이므로, $\\textcolor{red}{X}$와 $\\textcolor{blue}{Y}$를 결정하는 것으로 어떤 특정한 정현파를 표현할 수 있게 된다. 이때, $X + Yj$와 같이 복소수를 이용하여 표현하면, 허수가 기하적으로 회전을 의미한다는 사실과, 오일러 방정식 등 차후의 계산에 있어서 많은 이점을 얻게 된다. $X + Yj$는 $A\\cos(\\phi) + A\\sin(\\phi)j$ 같이 표현할 수 있고, $A\\cos(\\phi) + A\\sin(\\phi)j$는 오일러 공식으로 다음과 같이 표현이 가능하다. \\(\\begin{equation} A\\cos\\phi + jA\\sin\\phi = Ae^{\\phi j} \\end{equation}\\) $Ae^{\\phi j}$를 $A \\angle \\phi$와 같이 표현하기로 하자. 우리는 결론적으로 $A$와 $\\phi$를 이용하여 정현파를 표현할 수 있게 되었다. 마치 $(1,2)$로 특정한 점을 표현할 수 있는 것처럼 말이다. 이 방법을 phasor notation 이라고 부른다. phase는 물리학에서 위상을 의미하는데, 정현파를 위상차인 $\\phi$를 이용하여 표현하므로, phasor notation이라고 부른다고 한다. 정리 특정한 정현파를 다음과 같이 여러가지 방식으로 표현할 수 있고, \\eqref{eq:phasor1} , \\eqref{eq:phasor2} 의 표현방식을 phasor notation이라고 한다. (\\begin{align} \\textcolor{red}{A}\\cos(\\omega t + \\textcolor{blue}{\\phi}) \\textcolor{red}{A}e^{\\omega\\textcolor{blue}{\\phi}} \\label{eq:phasor1} \\textcolor{red}{A} \\angle \\textcolor{blue}{\\phi} \\label{eq:phasor2} X + Yj \\end{align}) phasor notation의 곱셈, 나눗셈과 미분","headline":"phasor notation의 개념과 연산","mainEntityOfPage":{"@type":"WebPage","@id":"https://carsleeper.github.io/posts/IEEE-10-1/"},"url":"https://carsleeper.github.io/posts/IEEE-10-1/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때) | 컴공생의 공부노트
+  <title>phasor notation의 개념과 연산 | 컴공생의 공부노트
   </title>
 
   <!--
@@ -239,6 +264,11 @@
 
 <script defer src="/assets/js/dist/post.min.js"></script>
 
+
+  <!-- MathJax -->
+  <script async src="/assets/js/data/mathjax.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
 
 
 <!-- Pageviews -->
@@ -447,7 +477,7 @@
         
           
             
-              <span>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</span>
+              <span>phasor notation의 개념과 연산</span>
             
 
           
@@ -536,6 +566,14 @@
     
     
 
+    
+      
+
+      
+      
+      
+
+      
     
       
 
@@ -651,6 +689,49 @@
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
+  
 
   
   
@@ -678,7 +759,7 @@
 
 <article class="px-1" data-toc="true">
   <header>
-    <h1 data-toc-skip>Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</h1>
+    <h1 data-toc-skip>phasor notation의 개념과 연산</h1>
     
 
     <div class="post-meta text-muted">
@@ -695,13 +776,13 @@
 
 <time
   
-  data-ts="1732291200"
+  data-ts="1732636800"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Nov 23, 2024
+  Nov 27, 2024
 </time>
 
       </span>
@@ -750,9 +831,9 @@
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="656 words"
+  title="936 words"
 >
-  <em>3 min</em> read</span>
+  <em>5 min</em> read</span>
 
         </div>
       </div>
@@ -761,7 +842,7 @@
 
   
     <div id="toc-bar" class="d-flex align-items-center justify-content-between invisible">
-      <span class="label text-truncate">Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</span>
+      <span class="label text-truncate">phasor notation의 개념과 연산</span>
       <button type="button" class="toc-trigger btn me-1">
         <i class="fa-solid fa-list-ul fa-fw"></i>
       </button>
@@ -774,7 +855,7 @@
 
     <dialog id="toc-popup" class="p-0">
       <div class="header d-flex flex-row align-items-center justify-content-between">
-        <div class="label text-truncate py-2 ms-4">Github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)</div>
+        <div class="label text-truncate py-2 ms-4">phasor notation의 개념과 연산</div>
         <button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75">
           <i class="fas fa-close"></i>
         </button>
@@ -784,70 +865,83 @@
   
 
   <div class="content">
-    <h2 id="나의-삽질-과정"><span class="me-2">나의 삽질 과정</span><a href="#나의-삽질-과정" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+    <h2 id="phasor-notation"><span class="me-2">phasor notation</span><a href="#phasor-notation" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p>일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. <br />
-따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다.
-<a href="https://a.okmd.dev/md/6741a15fc8c3b.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/6741a15fc8c3b.png" alt="s18331711232024" loading="lazy"></a>
-그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 
-이는 jekyll package가 제대로 빌드되지 않아서 발생하는 오류인데, 구글링을 하던 도중 다음과 같은 해결책을 발견했다.</p>
+<p>전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \cos(\omega t + \phi)$ 와 같은 수식을 사용한다. <br />
+주기가 $f$인 정현파라고 하면, $\omega = 2\pi f$가 될 것이다. <br />
+동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\omega$가 같다. <br />
+따라서 $A$와 $\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다.  ($ \because \omega$는 상수이다.) <br />
+다음의 과정을 거쳐보자.</p>
 <ol>
-  <li>Github Setting - Pages - Bulid and development 에서 Source를 Github Actions 로 변경 이후, jekyll.yml 커밋.</li>
-  <li>1번 과정에서 build 오류가 날 시, 로컬에서 다음의 명령어를 입력한 후 chirpy source를 커밋 &amp; 1번 과정 재시도.</li>
+  <li>삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다.
+\(\begin{equation}
+ f(t) = A \cos(\omega t + \phi) = \textcolor{red}{A\cos\phi}\cos\omega t - \textcolor{blue}{A\sin\phi}\sin\omega t
+ \label{eq:cosadd}
+\end{equation}\)</li>
+  <li>\eqref{eq:cosadd} 에서 $\textcolor{red}{A\cos\phi}$를 $\textcolor{red}{X}$, $\textcolor{blue}{A\sin\phi}$를 $\textcolor{blue}{Y}$라고 둔다면, $f(t)$는 다음과 같다. 
+\(\begin{equation}
+ f(t) = \textcolor{red}{X}\cos\omega t - \textcolor{blue}{Y}\sin\omega t
+\end{equation}\)</li>
+  <li>$\omega$는 상수이므로, $\textcolor{red}{X}$와 $\textcolor{blue}{Y}$를 결정하는 것으로 어떤 특정한 정현파를 표현할 수 있게 된다. <br />
+이때, $X + Yj$와 같이 복소수를 이용하여 표현하면, 허수가 기하적으로 회전을 의미한다는 사실과, 오일러 방정식 등 차후의 계산에 있어서 많은 이점을 얻게 된다. <br />
+<a href="https://a.okmd.dev/md/6746dbbc82889.png" class="popup img-link  shimmer"><img src="https://a.okmd.dev/md/6746dbbc82889.png" alt="s17433711272024" width="300px" loading="lazy"></a></li>
+  <li>$X + Yj$는 $A\cos(\phi) + A\sin(\phi)j$ 같이 표현할 수 있고, $A\cos(\phi) + A\sin(\phi)j$는 오일러 공식으로 다음과 같이 표현이 가능하다.
+\(\begin{equation}
+A\cos\phi + jA\sin\phi  = Ae^{\phi j}
+\end{equation}\)</li>
+  <li>$Ae^{\phi j}$를 $A \angle \phi$와 같이 표현하기로 하자.</li>
 </ol>
 
-<blockquote class="prompt-tip">
-  <p>bundle lock –add-platform x86_64-linux</p>
-</blockquote>
-
-<p>그러나 위의 해결책에도 불구하고 나는 jekyll.yml을 커밋하는 과정에서 빌드오류가 발생했다. <br />
-결국 나는 github actions에서 제공해주는 빌드 기능을 사용하지 않고, 수동으로 local에서 빌드해서 커밋하기로 했다. <del>정말 기분이 더러웠다.</del></p>
-
-<h2 id="수동으로-jekyll-package-빌드하기"><span class="me-2">수동으로 jekyll package 빌드하기</span><a href="#수동으로-jekyll-package-빌드하기" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>우리는 결론적으로 $A$와 $\phi$를 이용하여 정현파를 표현할 수 있게 되었다. 마치 $(1,2)$로 특정한 점을 표현할 수 있는 것처럼 말이다. <br />
+이 방법을 <strong>phasor notation</strong> 이라고 부른다. <br />
+phase는 물리학에서 위상을 의미하는데, 정현파를 위상차인 $\phi$를 이용하여 표현하므로, <strong>phasor</strong> notation이라고 부른다고 한다.</p>
+<h3 id="정리"><span class="me-2">정리</span><a href="#정리" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>특정한 정현파를 다음과 같이 여러가지 방식으로  표현할 수 있고, \eqref{eq:phasor1} , \eqref{eq:phasor2} 의 표현방식을 phasor notation이라고 한다.
+\(\begin{align}
+    \textcolor{red}{A}\cos(\omega t + \textcolor{blue}{\phi}) \\
+    \textcolor{red}{A}e^{\omega\textcolor{blue}{\phi}} \label{eq:phasor1} \\
+    \textcolor{red}{A} \angle \textcolor{blue}{\phi} \label{eq:phasor2} \\
+    X + Yj
+\end{align}\)</p>
+<h2 id="phasor-notation의-곱셈-나눗셈과-미분"><span class="me-2">phasor notation의 곱셈, 나눗셈과 미분</span><a href="#phasor-notation의-곱셈-나눗셈과-미분" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p>제목에서는 github blog라는 다소 애매한 용어을 사용했지만, 사실 대부분의 github 블로그 테마는 jekyll package이다. <br />
-jekyll package를 수동으로 빌드해서 github에 업로드하려면, gh-pages라는 브랜치를 생성 후, 이 브랜치에 <strong>_site폴더만</strong> 커밋해야 한다.</p>
-<blockquote class="prompt-info">
-  <p>_site폴더는 로컬에서 빌드하면 생성되는 폴더인데, c언어의 실행 파일과 같은, jekyll package의 빌드 후 생성된 정적 결과물이라고 볼 수 있다.</p>
-</blockquote>
-<ol>
-  <li>패키지 빌드 <br />
-로컬의 패키지 루트 폴더에서 다음과 같이 패키지를 빌드한다.
-    <div class="language-zsh highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>bundle <span class="nb">exec </span>jekyll build
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>_site폴더가 생성되었을 것이다. _site폴더에서 다음의 명령들을 입력해서 gh-pages 브랜치에 _site 폴더의 파일들을 push한다.
-    <div class="language-zsh highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre>git init
-git remote add origin <span class="s2">"ssh repo url"</span>
-git checkout <span class="nt">-b</span> gh-pages
-git add <span class="nb">.</span>
-git commit <span class="nt">-m</span> <span class="s2">"deploy"</span>
-git push <span class="nt">-u</span> origin gh-pages <span class="nt">--force</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>github settings - pages - source 섹션에서 gh-pages 브랜치를 선택한다.</li>
-</ol>
+<h3 id="phasor-notation의-곱셈-나눗셈"><span class="me-2">phasor notation의 곱셈, 나눗셈</span><a href="#phasor-notation의-곱셈-나눗셈" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>$ X = X_me^{\omega\phi} , Y = Y_me^{\omega\theta} $의 정의를 이용하면 phasor notation의 사칙연산을 유도할 수 있다.
+\(\begin{align}
+   XY = X_mY_m \angle (\phi + \theta) \\
+   {X \over Y} = {X_m \over Y_m} \angle (\phi - \theta) 
+\end{align}\)</p>
 
-<p>이제 정상적으로 웹 사이트가 작동하는 것을 확인할 수 있다. <br />
-이후에 1~2번 과정을 통해 글을 업로드할 수 있다.</p>
+<h3 id="phasor-notation의-미분"><span class="me-2">phasor notation의 미분</span><a href="#phasor-notation의-미분" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>또한 phasor notation은 정현파, 즉 t에 대한 함수를 의미하므로 phasor notation의 미분도 정의될 수 있다. <br />
+이때, phasor notation은  exponential의 미분법을 따르므로 매우 간단한 형태로 정리된다. <br />
+$ f(t) $ 에 대해,
+\(\begin{align}
+            f(t) = \textcolor{red}{X}\cos\omega t - \textcolor{blue}{Y}\sin\omega t \label{eq:before} \\
+    f^\prime(t) = -\omega X\sin\omega t - \omega Y\cos\omega t \\
+                = \textcolor{red}{(-\omega Y)}\cos\omega t - \textcolor{blue}{(\omega X)}\sin\omega t \label{eq:after}
+\end{align}\)
+\eqref{eq:before}과 \eqref{eq:after}를 비교해보면, 각각 $ X \rightarrow -\omega Y $ , $ Y \rightarrow \omega X$로 바뀐 것을 볼 수 있다. <br />
+이는 phasor notation의 rectangular representation에서 $\omega j$를 곱한 형태와 같다.
+\(\begin{align}
+    V = \textcolor{red}{X} + \textcolor{blue}{Y}j \\
+    V^\prime = \omega j\textcolor{red}{X} + -\omega\textcolor{blue}{Y} = \omega jV \\
+    \therefore V^\prime = \omega jV
+\end{align}\) 
+즉, $ V^\prime = \omega jV $ 이다. <br />
+미분식이 원형의 상수곱 형태로 표현된다는 사실은 계산상에 있어서 매우 편리한 이점이다. 대표적인 예시가 지수함수이다. <br />
+추후에 포스팅할 ac회로에서의 inductor, capacitor를 설명할 때도, 이 미분식이 매우 편리하게 이용된다.</p>
+
 <h2 id="출처"><span class="me-2">출처</span><a href="#출처" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 <hr />
 
-<p><a href="https://friendlyvillain.github.io/posts/chirpy-setup/">https://friendlyvillain.github.io/posts/chirpy-setup/</a> <br />
-chatgpt</p>
+<ul>
+  <li><a href="https://angeloyeo.github.io/2019/06/18/phasor.html">https://angeloyeo.github.io/2019/06/18/phasor.html</a></li>
+  <li>chatgpt</li>
+  <li>부산대학교 전상률 교수님 강의자료</li>
+</ul>
 
   </div>
 
@@ -889,21 +983,21 @@ chatgpt</p>
 
       
 
-      <a href="https://twitter.com/intent/tweet?text=Github%20blog%EB%A5%BC%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.%20(github%20actions%EB%A1%9C%20%EB%B9%8C%EB%93%9C%EA%B0%80%20%EB%90%98%EC%A7%80%20%EC%95%8A%EC%9D%84%20%EB%95%8C)%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8&url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fgithub-blog%25EB%25A5%25BC-%25EC%2588%2598%25EB%258F%2599%25EC%259C%25BC%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25ED%2595%2598%25EA%25B8%25B0.-%28github-actions%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25EA%25B0%2580-%25EB%2590%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%259D%2584-%25EB%2595%258C%29%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
+      <a href="https://twitter.com/intent/tweet?text=phasor%20notation%EC%9D%98%20%EA%B0%9C%EB%85%90%EA%B3%BC%20%EC%97%B0%EC%82%B0%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8&url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2FIEEE-10-1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter">
         <i class="fa-fw fa-brands fa-square-x-twitter"></i>
       </a>
     
 
       
 
-      <a href="https://www.facebook.com/sharer/sharer.php?title=Github%20blog%EB%A5%BC%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.%20(github%20actions%EB%A1%9C%20%EB%B9%8C%EB%93%9C%EA%B0%80%20%EB%90%98%EC%A7%80%20%EC%95%8A%EC%9D%84%20%EB%95%8C)%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8&u=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fgithub-blog%25EB%25A5%25BC-%25EC%2588%2598%25EB%258F%2599%25EC%259C%25BC%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25ED%2595%2598%25EA%25B8%25B0.-%28github-actions%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25EA%25B0%2580-%25EB%2590%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%259D%2584-%25EB%2595%258C%29%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?title=phasor%20notation%EC%9D%98%20%EA%B0%9C%EB%85%90%EA%B3%BC%20%EC%97%B0%EC%82%B0%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8&u=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2FIEEE-10-1%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook">
         <i class="fa-fw fab fa-facebook-square"></i>
       </a>
     
 
       
 
-      <a href="https://t.me/share/url?url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2Fgithub-blog%25EB%25A5%25BC-%25EC%2588%2598%25EB%258F%2599%25EC%259C%25BC%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25ED%2595%2598%25EA%25B8%25B0.-%28github-actions%25EB%25A1%259C-%25EB%25B9%258C%25EB%2593%259C%25EA%25B0%2580-%25EB%2590%2598%25EC%25A7%2580-%25EC%2595%258A%25EC%259D%2584-%25EB%2595%258C%29%2F&text=Github%20blog%EB%A5%BC%20%EC%88%98%EB%8F%99%EC%9C%BC%EB%A1%9C%20%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0.%20(github%20actions%EB%A1%9C%20%EB%B9%8C%EB%93%9C%EA%B0%80%20%EB%90%98%EC%A7%80%20%EC%95%8A%EC%9D%84%20%EB%95%8C)%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
+      <a href="https://t.me/share/url?url=https%3A%2F%2Fcarsleeper.github.io%2Fposts%2FIEEE-10-1%2F&text=phasor%20notation%EC%9D%98%20%EA%B0%9C%EB%85%90%EA%B3%BC%20%EC%97%B0%EC%82%B0%20-%20%EC%BB%B4%EA%B3%B5%EC%83%9D%EC%9D%98%20%EA%B3%B5%EB%B6%80%EB%85%B8%ED%8A%B8" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram">
         <i class="fa-fw fab fa-telegram"></i>
       </a>
     
@@ -1103,22 +1197,18 @@ chatgpt</p>
 
   
     <a
-      href="/posts/Dreamhack-csrf-1-write-up/"
+      href="/posts/op-amp/"
       class="btn btn-outline-primary"
       aria-label="Older"
     >
-      <p>Dreamhack CSRF-1 Write-Up</p>
+      <p>op-amp의 개념, 구조, 종류</p>
     </a>
   
 
   
-    <a
-      href="/posts/op-amp/"
-      class="btn btn-outline-primary"
-      aria-label="Newer"
-    >
-      <p>op-amp의 개념, 구조, 종류</p>
-    </a>
+    <div class="btn btn-outline-primary disabled" aria-label="Newer">
+      <p>-</p>
+    </div>
   
 </nav>
 

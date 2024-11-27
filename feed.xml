@@ -4,7 +4,7 @@
   <id>https://carsleeper.github.io/</id>
   <title>컴공생의 공부노트</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-11-25T20:21:20+08:00</updated>
+  <updated>2024-11-27T19:32:06+08:00</updated>
   <author>
     <name>Hyunwoo Lee</name>
     <uri>https://carsleeper.github.io/</uri>
@@ -17,6 +17,39 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>phasor notation의 개념과 연산</title>
+    <link href="https://carsleeper.github.io/posts/IEEE-10-1/" rel="alternate" type="text/html" title="phasor notation의 개념과 연산" />
+    <published>2024-11-27T00:00:00+08:00</published>
+  
+    <updated>2024-11-27T00:00:00+08:00</updated>
+  
+    <id>https://carsleeper.github.io/posts/IEEE-10-1/</id>
+    <content type="text/html" src="https://carsleeper.github.io/posts/IEEE-10-1/" />
+    <author>
+      <name>Hyunwoo Lee</name>
+    </author>
+
+  
+    
+  
+
+  <summary>phasor notation
+
+
+전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \cos(\omega t + \phi)$ 와 같은 수식을 사용한다. 
+주기가 $f$인 정현파라고 하면, $\omega = 2\pi f$가 될 것이다. 
+동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\omega$가 같다. 
+따라서 $A$와 $\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다.  ($ \because \omega$는 상수이다.) 
+다음의 과정을 거쳐보자.
+
+  삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다.
+\(\begin{equation}
+ f(t) = A \cos(\omega t + \phi) = \textcolor{red}{A\cos\phi}...</summary>
+
+  </entry>
 
   
   <entry>
