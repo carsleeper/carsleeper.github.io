@@ -1,6 +1,40 @@
 [
   
   {
+    "title": "jekyll 블로그에서 mathjax가 정상적으로 작동하지 않을 때",
+    "url": "/posts/mathjax-to-katex/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-12-02 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "문제 상황글을 작성하다보면 수식을 작성할 때가 많은데, 빌드 후 배포된 정적 파일에서 수식에 관련한 렌더링 문제가 생겼다. 포스팅에 처음 접속하면 다음과 같이 수식이 렌더링되지 않은 상태로 표시되다가, 새로고침을 몇 번 해주면 수식이 표시됐다가 안됐다가 하는 것이었다.수식이 항상 비정상적으로 표시되면 차라리 해결하기 쉬운데, 되었다 안되었다 하니까 별...",
+    "content": "문제 상황글을 작성하다보면 수식을 작성할 때가 많은데, 빌드 후 배포된 정적 파일에서 수식에 관련한 렌더링 문제가 생겼다. 포스팅에 처음 접속하면 다음과 같이 수식이 렌더링되지 않은 상태로 표시되다가, 새로고침을 몇 번 해주면 수식이 표시됐다가 안됐다가 하는 것이었다.수식이 항상 비정상적으로 표시되면 차라리 해결하기 쉬운데, 되었다 안되었다 하니까 별의 별 짓을 다 해봤던 것 같다. 최종적으로 내린 결론은 다음과 같다. 필자는 chirpy theme을 사용하는데, 이 테마에서는 기본적으로 kramdown 엔진을 사용하고 있다. 아무 설정을 안해도 수식 작성이 렌더링 되도록 만들어져 있는데, 이 때 default math engine을 어떤 것으로 채택하는지는 잘 모르겠다. 어쨌든, kramdown에서 default math engine 사용을 비활성화하고 katex를 따로 설정해주면서 위의 문제를 해결했다.Solution  katex 엔진 사용 설정/_include/head.html 파일에 https://katex.org/docs/browser에 나와있는 다음의 스크립트를 추가한다.  /_include/head.html 파일은 블로그의 정적 파일 빌드 시, 포스트의 head에 항상 포함시킬 내용을 작성하는 문서이다.    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css\" integrity=\"sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+\" crossorigin=\"anonymous\"&gt;    &lt;!-- The loading of KaTeX is deferred to speed up page rendering --&gt;    &lt;script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js\" integrity=\"sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg\" crossorigin=\"anonymous\"&gt;&lt;/script&gt;    &lt;!-- To automatically render math in text elements, include the auto-render extension: --&gt;    &lt;script defer src=\"https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js\" integrity=\"sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk\" crossorigin=\"anonymous\"        onload=\"renderMathInElement(document.body);\"&gt;&lt;/script&gt;위의 코드는 수식을 렌더링하기 위한 스크립트를 cdn에서 참조하는 역할을 한다. 또한, 동일한 파일에서 다음의 스크립트를 통해, inline, display수식 식별자를 지정해주었다.  &lt;script&gt;    document.addEventListener(\"DOMContentLoaded\", function() {      renderMathInElement(document.body, {        delimiters: [          { left: \"$$\", right: \"$$\", display: true },          { left: \"\\\\[\", right: \"\\\\]\", display: true },          { left: \"$\", right: \"$\", display: false }        ]      });    });  &lt;/script&gt;  kramdown default math engine 비활성화kramdown:  ...  use_math: false  .../_config.yml의 kramdown 속성에 위와 같은 라인을 추가하여 default engine을 비활성화한다.최종적으로 다음과 같이 수식이 일관적으로 잘 출력되는 것을 볼 수 있다.출처  https://khw11044.github.io/blog/blog-etc/2020-12-21-jekyll-Latex/  chatgpt"
+  },
+  
+  {
+    "title": "Katex Test",
+    "url": "/posts/katex-test/",
+    "categories": "",
+    "tags": "",
+    "date": "2024-12-02 00:00:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "가나다라마바사 $x + y = 4$\\begin{equation}x + y = 4\\end{equation}가나다라마바사\\[\\begin{aligned}        a &amp;= b + c \\\\        b + c &amp;= a    \\end{aligned}\\]",
+    "content": "가나다라마바사 $x + y = 4$\\begin{equation}x + y = 4\\end{equation}가나다라마바사\\[\\begin{aligned}        a &amp;= b + c \\\\        b + c &amp;= a    \\end{aligned}\\]"
+  },
+  
+  {
     "title": "Dreamhack XSS Filtering Bypass Write up",
     "url": "/posts/Dreamhackwriteup3/",
     "categories": "",

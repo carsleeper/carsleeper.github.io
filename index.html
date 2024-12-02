@@ -59,6 +59,7 @@
 <meta property="og:url" content="/" />
 <meta property="og:site_name" content="Chirpy" />
 <meta property="og:type" content="website" />
+<link rel="next" href="/page2" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Chirpy" />
 <meta name="twitter:site" content="@twitter_username" />
@@ -762,6 +763,123 @@
     </article>
   
     <article class="card-wrapper card">
+      <a href="/posts/mathjax-to-katex/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">jekyll 블로그에서 mathjax가 정상적으로 작동하지 않을 때</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>문제 상황
+
+
+글을 작성하다보면 수식을 작성할 때가 많은데, 빌드 후 배포된 정적 파일에서 수식에 관련한 렌더링 문제가 생겼다. 
+포스팅에 처음 접속하면 다음과 같이 수식이 렌더링되지 않은 상태로 표시되다가, 새로고침을 몇 번 해주면 수식이 표시됐다가 안됐다가 하는 것이었다.
+
+
+
+수식이 항상 비정상적으로 표시되면 차라리 해결하기 쉬운데, 되었다 안되...</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1733068800"
+  data-df="ll"
+  
+>
+  Dec  2, 2024
+</time>
+
+
+                <!-- categories -->
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
+      <a href="/posts/katex-test/" class="post-preview row g-0 flex-md-row-reverse">
+        
+
+        
+
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">Katex Test</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>가나다라마바사 $x + y = 4$
+
+\begin{equation}
+x + y = 4
+\end{equation}
+
+가나다라마바사
+
+[\begin{aligned}
+        a &amp;amp;= b + c 
+        b + c &amp;amp;= a
+    \end{aligned}]</p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1733068800"
+  data-df="ll"
+  
+>
+  Dec  2, 2024
+</time>
+
+
+                <!-- categories -->
+                
+              </div>
+
+              
+            </div>
+            <!-- .post-meta -->
+          </div>
+          <!-- .card-body -->
+        </div>
+      </a>
+    </article>
+  
+    <article class="card-wrapper card">
       <a href="/posts/Dreamhackwriteup3/" class="post-preview row g-0 flex-md-row-reverse">
         
 
@@ -1107,66 +1225,82 @@ op-amp는 두 입력 신호에 대해 사칙연산, 미분, 적분과 같은 여
       </a>
     </article>
   
-    <article class="card-wrapper card">
-      <a href="/posts/write-a-new-post/" class="post-preview row g-0 flex-md-row-reverse">
-        
-
-        
-
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">Writing a New Post</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>This tutorial will guide you how to write a post in the Chirpy template, and it’s worth reading even if you’ve used Jekyll before, as many features require specific variables to be set.
-
-Naming and...</p>
-            </div>
-
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-<time
-  
-  data-ts="1565244600"
-  data-df="ll"
-  
->
-  Aug  8, 2019
-</time>
-
-
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Blogging,
-                      Tutorial
-                  </span>
-                
-              </div>
-
-              
-            </div>
-            <!-- .post-meta -->
-          </div>
-          <!-- .card-body -->
-        </div>
-      </a>
-    </article>
-  
 </div>
 <!-- #post-list -->
+
+
+  <!-- The paginator for post list on HomgPage. -->
+
+<nav aria-label="Page Navigation">
+  <ul class="pagination align-items-center mt-4 mb-0">
+    <!-- left arrow -->
+    
+
+    <li class="page-item disabled">
+      <a class="page-link" href="#" aria-label="previous-page">
+        <i class="fas fa-angle-left"></i>
+      </a>
+    </li>
+
+    <!-- page numbers -->
+    
+    
+
+    
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- show number -->
+        <li class="page-item  active">
+          <a
+            class="page-link"
+            href="/"
+          >1</a>
+        </li>
+      
+    
+      
+      
+      
+      
+      
+
+      
+
+      
+        <!-- show number -->
+        <li class="page-item ">
+          <a
+            class="page-link"
+            href="/page2"
+          >2</a>
+        </li>
+      
+    
+
+    <!-- mobile pagination -->
+    <li class="page-index align-middle">
+      <span>1</span>
+      <span class="text-muted">/ 2</span>
+    </li>
+
+    <!-- right arrow -->
+    
+
+    <li class="page-item ">
+      <a class="page-link" href="/page2" aria-label="next-page">
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+<!-- .pagination -->
 
 
 
@@ -1200,6 +1334,20 @@ Naming and...</p>
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/katex-test/">Katex Test</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/mathjax-to-katex/">jekyll 블로그에서 mathjax가 정상적으로 작동하지 않을 때</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/Dreamhack-WriteUp2/">Dreamhack CSRF-1 Write-Up</a>
         </li>
       
@@ -1215,20 +1363,6 @@ Naming and...</p>
         
         <li class="text-truncate lh-lg">
           <a href="/posts/IEEE-10-1/">phasor notation의 개념과 연산</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/getting-started/">Getting Started</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/op-amp/">op-amp의 개념, 구조, 종류</a>
         </li>
       
     </ul>
