@@ -1,0 +1,215 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>/</id>
+  <title>Chirpy</title>
+  <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
+  <updated>2024-12-02T08:03:14+08:00</updated>
+  <author>
+    <name>your_full_name</name>
+    <uri>/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <rights> © 2024 your_full_name </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Dreamhack XSS Filtering Bypass Write up</title>
+    <link href="/posts/Dreamhackwriteup3/" rel="alternate" type="text/html" title="Dreamhack XSS Filtering Bypass Write up" />
+    <published>2024-11-29T00:00:00+08:00</published>
+  
+    <updated>2024-11-29T00:00:00+08:00</updated>
+  
+    <id>/posts/Dreamhackwriteup3/</id>
+    <content type="text/html" src="/posts/Dreamhackwriteup3/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+  
+
+  <summary>backend-side 분석
+
+
+#!/usr/bin/python3
+from flask import Flask, request, render_template
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import urllib
+import os
+
+app = Flask(__name__)
+app.secret_key = os.urandom(32)
+
+try:
+    FLAG = open(&amp;quot;./flag.txt&amp;quot;, &amp;quot;r&amp;quot;).read()
+except:
+    FLAG = &amp;quot;[**FLAG**]&amp;quot;
+
+#localhost에서 전달받은 쿠키로 url에 get요청.
+def read_url(url, cookie={&amp;quot;name...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Dreamhack CSRF-1 Write-Up</title>
+    <link href="/posts/Dreamhack-WriteUp2/" rel="alternate" type="text/html" title="Dreamhack CSRF-1 Write-Up" />
+    <published>2024-11-29T00:00:00+08:00</published>
+  
+    <updated>2024-11-29T00:00:00+08:00</updated>
+  
+    <id>/posts/Dreamhack-WriteUp2/</id>
+    <content type="text/html" src="/posts/Dreamhack-WriteUp2/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+  
+
+  <summary>backend-side 분석
+
+
+#!/usr/bin/python3
+from flask import Flask, request, render_template, make_response, redirect, url_for
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+import urllib
+import os
+
+app = Flask(__name__)
+app.secret_key = os.urandom(32)
+
+try:
+    FLAG = open(&amp;quot;./flag.txt&amp;quot;, &amp;quot;r&amp;quot;).read()
+except:
+    FLAG = &amp;quot;[**FLAG**]&amp;quot;
+
+users = {
+    &amp;#39;guest&amp;#39;: &amp;#39;guest&amp;#39;,...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>phasor notation의 개념과 연산</title>
+    <link href="/posts/IEEE-10-1/" rel="alternate" type="text/html" title="phasor notation의 개념과 연산" />
+    <published>2024-11-27T00:00:00+08:00</published>
+  
+    <updated>2024-11-27T00:00:00+08:00</updated>
+  
+    <id>/posts/IEEE-10-1/</id>
+    <content type="text/html" src="/posts/IEEE-10-1/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="IEEE" />
+    
+  
+
+  <summary>phasor notation
+
+
+전기전자공학에서 정현파를 표현하기 위해서는 $f(t) = A \cos(\omega t + \phi)$ 와 같은 수식을 사용한다. 
+주기가 $f$인 정현파라고 하면, $\omega = 2\pi f$가 될 것이다. 
+동일한 RLC회로에서 회로에서 교류전압 $v$와 그로 인한 $i$는 $\omega$가 같다. 
+따라서 $A$와 $\phi$만 결정되면 특정 상태의 유일한 정현파를 결정할 수 있게 된다.  ($\because \omega$는 상수이다.) 
+다음의 과정을 거쳐보자.
+
+  삼각함수의 덧셈정리를 이용해 $f(t)$를 전개한다.
+\(f(t) = A \cos(\omega t + \phi) = \textcolor{red}{A\cos\phi}\cos\omega t - \tex...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>op-amp의 개념, 구조, 종류</title>
+    <link href="/posts/op-amp/" rel="alternate" type="text/html" title="op-amp의 개념, 구조, 종류" />
+    <published>2024-11-25T00:00:00+08:00</published>
+  
+    <updated>2024-11-25T00:00:00+08:00</updated>
+  
+    <id>/posts/op-amp/</id>
+    <content type="text/html" src="/posts/op-amp/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+    <category term="IEEE" />
+    
+  
+
+  <summary>op-amp
+
+
+
+  op-amp는 두 입력 전압의 차이를 증폭시킨 전압을 출력하는 고이득 전압 증폭기이다.
+
+op-amp의 정식명칭은 operation amplifier인데, 그 이름에서 단자의 역할을 유추할 수 있다. 
+op-amp는 두 입력 신호에 대해 사칙연산, 미분, 적분과 같은 여러가지 연산(operation)을 한 후 그 결과를 몇 십~몇 백만배 증폭(amplifier)해서 출력해준다.
+op-amp는 다음의 수식으로 대표된다.
+
+[\begin{equation}
+v_o = A(v_+ - v_-)
+    \label{eq:op_amp}
+\end{equation}]
+
+위의 수식으로 op-amp의 역할을 직관적으로 이해할 수 있다.
+
+op-amp의 구조
+
+
+op-amp에서 알아야 할 컴포넌트는 크...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>How To Build Jekyll Blog Manually</title>
+    <link href="/posts/how-to-build-jekyll-blog-manually/" rel="alternate" type="text/html" title="How To Build Jekyll Blog Manually" />
+    <published>2024-11-23T00:00:00+08:00</published>
+  
+    <updated>2024-11-23T00:00:00+08:00</updated>
+  
+    <id>/posts/how-to-build-jekyll-blog-manually/</id>
+    <content type="text/html" src="/posts/how-to-build-jekyll-blog-manually/" />
+    <author>
+      <name>your_full_name</name>
+    </author>
+
+  
+    
+  
+
+  <summary>github blog를 수동으로 빌드하기. (github actions로 빌드가 되지 않을 때)
+나의 삽질 과정
+——–
+일반적인 경우에는 github에서 chirpy theme을 fork한 후에, repo name을 username.github.io으로 설정하면 자동으로 빌드가 된다. 
+따라서 위의 과정만 수행하면, 해당 url에서 다음과 같은 chirpy의 메인화면이 출력되는 것을 볼 수 있다.
+
+그러나 나는 index.html의 내용인 “layout: home # Index page”라는 텍스트 밖에 뜨지 않았다. 
+길고 긴 구글링을 통해 jekyll을 통한 빌드가 제대로 되지 않으면 위의 상황이 발생한다는 것을 알 수 있었다. 
+그래서 구글링을 하던 도중 다음과 같은 해결책을 발견했다.
+
+  Gi...</summary>
+
+  </entry>
+
+</feed>
+
+
